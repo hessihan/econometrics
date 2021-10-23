@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import sys
-sys.path.append("/mnt/d/0ngoing/my_projects/reg_from_scratch/src")
+sys.path.append("/mnt/d/0ngoing/my_projects/econometrics/src")
 from econometrics import LinearRegression
 
 # Debug
