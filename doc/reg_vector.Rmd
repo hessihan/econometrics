@@ -1,0 +1,108 @@
+---
+title: "Regression in Vector Form"
+author: "Sihan Wang"
+date: "5/21/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Notation
+
+$$\begin{eqnarray}
+X, Y, U &:& {\rm random \ variable} \\
+y &:& {\rm scalar \ random \ variable \ (or \ realized) \ of \ explained \ variable} \\
+{\bf x} \equiv (x_1, x_2, \cdots, x_k) &:& 1 \times K \ {\rm random \ vector \ (or \ realized) \ of \ explanatory \ variable} \\
+\end{eqnarray}$$
+
+$$\begin{eqnarray}
+y &=& \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_k x_k + u \\
+\end{eqnarray}$$
+
+## Unbiasedness
+
+以下2つの仮定を満たすとき、OLSは普遍一致推定量$\hat{\beta_1}$を与える。
+
+1. ${\rm E}[U]=0$
+2. ${\rm E}[U|X]=0$
+
+$$\begin{eqnarray}
+{\rm E}[U|X] &=& 0
+\end{eqnarray}$$
+
+## Consistency
+
+仮に不偏性の仮定が成り立っていなくても、以下2つの仮定を満たすとき、OLSは一致推定量$\hat{\beta_1}$を与える。
+
+1. ${\rm E}[U]=0$
+2. ${\rm COV}[X, U]=0$
+
+$$\begin{eqnarray}
+{\rm COV}[X, U] &=& 0
+\end{eqnarray}$$
+
+
+## Vector Form
+
+$$\begin{eqnarray}
+\left(
+\begin{array}{c}
+y_1  \\
+\vdots  \\
+y_i  \\
+\vdots  \\
+y_N
+\end{array}
+\right) &=& 
+\left(
+\begin{array}{c}
+\beta_0 + \beta_1 x_{11} + \beta_2 x_{12} + \cdots + \beta_k x_{1k} \\
+\vdots  \\
+\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \cdots + \beta_k x_{ik} \\
+\vdots  \\
+\beta_0 + \beta_1 x_{N1} + \beta_2 x_{N2} + \cdots + \beta_k x_{Nk} \\
+ \\
+\end{array}
+\right) +
+\left(
+\begin{array}{c}
+u_1  \\
+\vdots  \\
+u_i  \\
+\vdots  \\
+u_N
+\end{array}
+\right) \\
+\left(
+\begin{array}{c}
+y_1  \\
+\vdots  \\
+y_i  \\
+\vdots  \\
+y_N
+\end{array}
+\right) &=& 
+\left(
+\begin{array}{c}
+{\bf x_1}{\bf \beta} \\
+\vdots  \\
+{\bf x_i}{\bf \beta} \\
+\vdots  \\
+{\bf x_N}{\bf \beta} \\
+\end{array}
+\right) +
+\left(
+\begin{array}{c}
+u_1  \\
+\vdots  \\
+u_i  \\
+\vdots  \\
+u_N
+\end{array}
+\right) \\
+{\bf y} &=& {\bf X}{\bf \beta} + {\bf u} \\
+\end{eqnarray}$$
+
+## OLS Assumptions

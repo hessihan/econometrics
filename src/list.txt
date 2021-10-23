@@ -1,0 +1,9 @@
+* OLS
+* robust standard error (se = "homo" or "hetero")
+* cluster standard error
+
+* omitted variable bias direction calculator
+
+* probit, logit
+* marginal effect
+* marginal plot
